@@ -26,11 +26,15 @@
             sheet_name_list.forEach(function (y) { //Recorrer las hojas
                 //Convertir el valor de la celda a Json
                 var headers = ["Nombres", "Apellido Materno", "Apellido Paterno", "Grado", "Grupo", "Calificacion"];
-                excelJson = XLSX.utils.sheet_to_json(oFile.Sheets[y], { header: headers, range: 1, defval:"" });
+                excelJson = XLSX.utils.sheet_to_json(oFile.Sheets[y], { header: headers, range: 1, defval: "" });
+                fnReset();
+                fnDtAlumnos();
                 if (excelJson.length > 0) {
-                    fnReset();
                     //Sí el json no viene vacío se manda llamar a la función de validar archivo
                     fnValidarArchivo();
+                } else {         
+                    $('#alertError').show();
+                    $('#alertError').html("<span class='glyphicon glyphicon-remove' aria-hidden='true'></span> El archivo que intenta procesar no tiene registros.");
                 }
             });
         };
@@ -63,7 +67,6 @@
             fnGenerarGraficaAlumnos();
             fnGenerarGraficaPromedio();
         }
-        fnDtAlumnos();
     }
 
     function fnDtAlumnos() {

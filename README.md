@@ -21,7 +21,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 :small_blue_diamond: SheetJS 2013
 
 
-# Reglas del negocio :clipboard:
+# Reglas de negocio :clipboard:
 * Se debe cargar a memoria el archivo en formato Excel llamado Calificaciones.xlsx.
 * Una vez cargado el archivo, se debe realizar una gráfica de barras con la información de los alumnos con respecto a las calificaciones (sin tomar en cuenta grado ni grupo).
 * Utilizar cualquier tipo de grafica (excepto de barras) donde se indique la calificación promedio de cada grado.
@@ -29,10 +29,13 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 * Mostrar el nombre completo del alumno con peor calificación.
 * Mostrar el promedio de calificación de todos los alumnos.
 
-__Notas:__ 
+__Notas:__ :warning:
 * El archivo no deberá contener calificaciones vacías.
 * Deberá respetar la plantilla llamada __Calificaciones.xlsx__ (incluída en este repositorio).
 * El formato único permitido deberá ser __.XLSX y .XLS__
+
+# Ejecutando las pruebas :checkered_flag:
+
 
 # Autores :busts_in_silhouette:
 

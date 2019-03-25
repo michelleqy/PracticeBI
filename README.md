@@ -29,13 +29,17 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 * Mostrar el nombre completo del alumno con peor calificación.
 * Mostrar el promedio de calificación de todos los alumnos.
 
-__Notas:__ :warning:
+__Notas__ :warning: __:__
 * El archivo no deberá contener calificaciones vacías.
 * Deberá respetar la plantilla llamada __Calificaciones.xlsx__ (incluída en este repositorio).
 * El formato único permitido deberá ser __.XLSX y .XLS__
 
 # Ejecutando las pruebas :checkered_flag:
+Una vez que el sistema ha sido ejecutado de forma correcta, debemos: 
 
+* Cargar el archivo a procesar, considerando las restricciones anteriores.
+* El sistema procesará el archivo proporcionado por el usuario; de ser válido, mostrará en el dashboard los resultados esperados en las reglas de negocio.
+* Si el archivo es inválido, mostrará una notificación de error y un preview de la información cargada.
 
 # Autores :busts_in_silhouette:
 

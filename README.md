@@ -1,4 +1,4 @@
-# PracticeBI
+# PracticeBI :bar_chart: :chart_with_downwards_trend:
 
 Esta herramienta procesa y representa en un dashboard calificaciones de alumnos, las cuales son proporcionadas por el usuario mediante la carga en memoria de un archivo en excel. 
 

@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+@section styles{
+    @Styles.Render("~/Content/Plugins/datatables/css")
+    @Styles.Render("~/Content/Plugins/amcharts/amcharts/plugins/export/export")
+}
+
+<div class="jumbotron">
+    <h1>Alumnos</h1>
+</div>
+
+<div class="alert alert-danger error" role="alert" id="alertError"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Cargar archivo</div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <input type="file" name="files" id="excelfile" accept=".xlsx,.xls">
+                    <p class="help-block"> Archivo formato .xlsx</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Es importante que el archivo tenga la estructura que se muestra a continuación.</div>
+                </div>
+                <!-- Table -->
+                <table class="table" id="tblAlumnos">
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Apellido Materno</th>
+                            <th>Apellido Paterno</th>
+                            <th>Grado</th>
+                            <th>Grupo</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row detalles">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Resumen</div>
+            <div class="panel-body resumen">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Alumno con mayor calificación <span id="alumnoMayorC" class="label label-success"></span></h1>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Alumno con menor calificación <span id="alumnoMenorC" class="label label-danger"></span></h1>
+                    </div>
+                </div>
+                <h1>Promedio general <span id="promedioGral" class="label label-default"></span></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row detalles">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                Gráfica calificación por alumno
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div id="divGraficaCal" class="chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row detalles">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+                Gráfica promedio por grado
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div id="divGraficaPromedio" class="chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/Content/Plugins/datatables")
+    @Scripts.Render("~/Content/Plugins/alasql")
+    <script src="@Url.Content("~/Content/Plugins/sheetjs/xlsx.full.min.js")"></script>
+    <script src="@Url.Content("~/JQueryCode/Plugins/Lib.Graficas.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/JQueryCode/Index.js")" type="text/javascript"></script>
+}

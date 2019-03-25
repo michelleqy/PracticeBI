@@ -42,7 +42,10 @@ __Notas__ :warning: __:__
 
 # Ejecutando las pruebas :checkered_flag:
 
-Una vez que el sistema ha sido ejecutado de forma correcta, debemos: 
+Si se tiene problemas para compilar la solución, se recomienda cambiar el puerto del proyecto de la siguiente manera:
+Project Properties → Web → Servers → Project Url
+
+Una vez que la solución ha sido compilada correctamente, debemos: 
 
 * Cargar el archivo a procesar, considerando las restricciones anteriores.
 * El sistema procesará el archivo proporcionado por el usuario; de ser válido, mostrará en el dashboard los resultados esperados en las reglas de negocio.
